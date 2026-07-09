@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="template"
+    client="site"
+    method="upgrade">
+
+    <name>tpl_edemtour</name>
+
+    <version>1.0.0</version>
+
+    <creationDate>2026-07-09</creationDate>
+
+    <author>Edem Tour</author>
+
+    <authorEmail>info@edemtour.lv</authorEmail>
+
+    <authorUrl>https://www.edemtour.lv</authorUrl>
+
+    <copyright>(C) Edem Tour</copyright>
+
+    <license>GNU General Public License version 2 or later</license>
+
+    <description>
+        Lightweight Joomla 5 template for Edem Tour.
+    </description>
+
+    <files>
+
+        <filename>index.php</filename>
+        <filename>component.php</filename>
+        <filename>error.php</filename>
+        <filename>offline.php</filename>
+        <filename>index.html</filename>
+
+    </files>
+
+    <folders>
+
+        <folder>html</folder>
+        <folder>images</folder>
+        <folder>language</folder>
+
+    </folders>
+
+    <positions>
+
+        <position>topbar-left</position>
+        <position>topbar-right</position>
+
+        <position>header</position>
+
+        <position>menu</position>
+
+        <position>breadcrumbs</position>
+
+        <position>content-top</position>
+        <position>content-bottom</position>
+
+        <position>sidebar-left</position>
+        <position>sidebar-right</position>
+
+        <position>footer-company</position>
+        <position>footer-contact</position>
+        <position>footer-links</position>
+        <position>footer-newsletter</position>
+
+        <position>debug</position>
+
+    </positions>
+
+</extension>
