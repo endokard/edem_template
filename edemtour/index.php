@@ -3,12 +3,32 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
-use Joomla\CMS\Uri\Uri;
+use Joomla\CMS\HTML\HTMLHelper;
 
-$app = Factory::getApplication();
-$wa  = $this->getWebAssetManager();
+$app      = Factory::getApplication();
+$document = $app->getDocument();
+$wa       = $document->getWebAssetManager();
 
-$wa->usePreset('template.edemtour');
+/*
+ * Bootstrap JavaScript из Joomla.
+ * CSS шаблона подключаем отдельно через Web Asset Manager.
+ */
+HTMLHelper::_('bootstrap.framework');
+
+$wa->registerAndUseStyle(
+    'template.edemtour.styles',
+    'templates/edemtour/css/template.css'
+);
+
+$wa->registerAndUseScript(
+    'template.edemtour.scripts',
+    'templates/edemtour/js/template.js',
+    [],
+    [
+        'type'  => 'module',
+        'defer' => true,
+    ]
+);
 
 $phone = trim((string) $this->params->get('phone', '+371'));
 $email = trim((string) $this->params->get('email', 'info@edemtour.lv'));
