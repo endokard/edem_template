@@ -1,71 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<extension
-    type="template"
-    client="site"
-    method="upgrade">
-
-    <name>tpl_edemtour</name>
-
+<?xml version="2.0" encoding="utf-8"?>
+<extension type="template" client="site" method="upgrade">
+    <name>edemtour</name>
     <version>1.0.0</version>
-
     <creationDate>2026-07-09</creationDate>
-
     <author>Edem Tour</author>
-
     <authorEmail>info@edemtour.lv</authorEmail>
-
-    <authorUrl>https://www.edemtour.lv</authorUrl>
-
-    <copyright>(C) Edem Tour</copyright>
-
-    <license>GNU General Public License version 2 or later</license>
-
-    <description>
-        Lightweight Joomla 5 template for Edem Tour.
-    </description>
+    <copyright>Copyright (C) Edem Tour</copyright>
+    <license>GPL-2.0-or-later</license>
+    <description>Custom Joomla 5 template for Edem Tour.</description>
 
     <files>
-
         <filename>index.php</filename>
         <filename>component.php</filename>
         <filename>error.php</filename>
         <filename>offline.php</filename>
-        <filename>index.html</filename>
-
-    </files>
-
-    <folders>
-
+        <filename>joomla.asset.json</filename>
+        <folder>css</folder>
+        <folder>js</folder>
         <folder>html</folder>
         <folder>images</folder>
         <folder>language</folder>
-
-    </folders>
+    </files>
 
     <positions>
-
-        <position>topbar-left</position>
-        <position>topbar-right</position>
-
-        <position>header</position>
-
-        <position>menu</position>
-
-        <position>breadcrumbs</position>
-
-        <position>content-top</position>
-        <position>content-bottom</position>
-
-        <position>sidebar-left</position>
-        <position>sidebar-right</position>
-
+        <position>topbar-search</position>
+        <position>topbar-language</position>
+        <position>topbar-login</position>
+        <position>main-menu</position>
         <position>footer-company</position>
-        <position>footer-contact</position>
+        <position>footer-contacts</position>
         <position>footer-links</position>
-        <position>footer-newsletter</position>
-
-        <position>debug</position>
-
+        <position>footer-subscribe</position>
     </positions>
 
+    <config>
+        <fields name="params">
+            <fieldset name="topbar" label="Top Bar">
+                <field
+                    name="phone"
+                    type="text"
+                    label="Phone"
+                    default="+371"
+                />
+
+                <field
+                    name="email"
+                    type="email"
+                    label="Email"
+                    default="info@edemtour.lv"
+                />
+            </fieldset>
+        </fields>
+    </config>
 </extension>
