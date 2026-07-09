@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "edemtour",
+  "version": "1.0.0",
+  "description": "Assets for Edem Tour Joomla template.",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "template.edemtour",
+      "type": "preset",
+      "dependencies": [
+        "bootstrap.css",
+        "bootstrap.bundle",
+        "template.edemtour.styles",
+        "template.edemtour.scripts"
+      ]
+    },
+    {
+      "name": "template.edemtour.styles",
+      "type": "style",
+      "uri": "templates/edemtour/css/template.css"
+    },
+    {
+      "name": "template.edemtour.scripts",
+      "type": "script",
+      "uri": "templates/edemtour/js/template.js",
+      "attributes": {
+        "type": "module",
+        "defer": true
+      }
+    }
+  ]
+}
